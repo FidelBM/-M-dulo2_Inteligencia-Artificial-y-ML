@@ -447,7 +447,11 @@ Matriz de confusión:
 
 # Interpretación de resultados
 
-El modelo logró una accuracy de aproximadamente **67%** en test.
+Para la evaluación inicial del modelo se utilizaron métricas estándar de clasificación multiclase, debido a que el objetivo del proyecto es clasificar imágenes de perros en cuatro emociones: angry, happy, relaxed y sad. Las métricas seleccionadas fueron accuracy, precision, recall, F1-score y matriz de confusión.
+
+La selección de estas métricas se basa en el artículo Classification of Dog Emotions Using Convolutional Neural Network Method, donde los autores evalúan modelos de clasificación de emociones de perros mediante métricas como accuracy, precision, recall, F1-score y ROC-AUC.
+
+Con eso podemos decir que el modelo logró una accuracy de aproximadamente **67%** en test.
 
 Como hay cuatro clases, un modelo que adivinara al azar tendría un desempeño cercano a:
 
