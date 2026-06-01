@@ -43,6 +43,10 @@ Data/
 
 Cada clase contiene aproximadamente **1000 imágenes**, por lo que el dataset está balanceado. Esto es útil porque evita que el modelo aprenda más de una clase que de otra.
 
+Paper usado como referencia [CLASSIFICATION OF DOG EMOTIONS USING CONVOLUTIONAL NEURAL NETWORK METHOD](https://drive.google.com/file/d/1xbXEbpDo8rO1zZc3t9-56L_ABptaHiDW/view?usp=sharing)
+
+Carpeta del Google Drive: [Dog Emotions](https://drive.google.com/drive/folders/1AYk4SK1HflfkWiDXzO6UvaRKisGqGZSH)
+
 ## Objetivo
 
 El objetivo principal es entrenar un modelo capaz de clasificar imágenes de perros en una de las siguientes emociones:
