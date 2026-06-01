@@ -1,2 +1,1 @@
-Embeddings/Data/Reviews.csv filter=lfs diff=lfs merge=lfs -text
-Embeddings/Data/*.npz filter=lfs diff=lfs merge=lfs -text
+Split/*.npz filter=lfs diff=lfs merge=lfs -text
