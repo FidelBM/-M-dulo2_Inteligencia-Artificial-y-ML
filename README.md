@@ -270,6 +270,8 @@ Accuracy de validación cercana a 60%
 Accuracy de test cercana a 63%
 ```
 
+Las curvas de precisión y pérdida muestran un entrenamiento estable, con mejoras progresivas y diferencias reducidas entre los resultados de entrenamiento y validación. Esto indica que no existe evidencia significativa de overfitting. Sin embargo, al alcanzar una precisión cercana al 60 % en ambos conjuntos, el modelo presenta un ligero underfitting. Por esta razón, se desarrollará un nuevo modelo con ajustes en su arquitectura e hiperparámetros para reducir el subajuste y mejorar su rendimiento.
+
 ---
 
 # Segundo modelo: EfficientNetV2B0
