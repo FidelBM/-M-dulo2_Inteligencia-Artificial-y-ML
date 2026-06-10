@@ -12,8 +12,6 @@ relaxed
 sad
 ```
 
----
-
 ## Descripción del proyecto
 
 Este proyecto tiene como objetivo construir un clasificador de emociones de perros usando imágenes.  
@@ -76,8 +74,6 @@ El proyecto sigue este proceso:
 11. Analizar métricas y matriz de confusión
 ```
 
----
-
 # Separación del dataset
 
 El dataset original solo viene separado por clases, pero no por entrenamiento, validación y prueba.  
@@ -137,8 +133,6 @@ Dogs Emotions/
 └── README.md
 ```
 
----
-
 # Preparación de datos
 
 ## Data augmentation
@@ -172,8 +166,6 @@ Validation → solo preprocesamiento básico
 Test       → solo preprocesamiento básico
 ```
 
----
-
 ## Generadores de imágenes
 
 Después se crean los generadores, estos se carga las imágenes directamente desde carpetas `flow_from_directory` donde detecta automáticamente las clases según el nombre de las carpetas:
@@ -194,8 +186,6 @@ Parámetros importantes:
 | `class_mode="categorical"` | Usa etiquetas para clasificación multiclase |
 
 Ya con esa configuración y con la verificación que los datos estén bien entrenados ahora pasamos a la parte más importante que son los modelo
-
----
 
 # Primer modelo: VGG16
 
@@ -251,8 +241,6 @@ En este caso, el modelo predice `happy`.
 
 Ahora el modelo se entrena durante 10 épocas.
 
----
-
 ## Evaluación del entrenamiento
 
 Interpretación general del primer modelo:
@@ -271,8 +259,6 @@ Accuracy de test cercana a 63%
 ```
 
 Las curvas de precisión y pérdida muestran un entrenamiento estable, con mejoras progresivas y diferencias reducidas entre los resultados de entrenamiento y validación. Esto indica que no existe evidencia significativa de overfitting. Sin embargo, al alcanzar una precisión cercana al 60 % en ambos conjuntos, el modelo presenta un ligero underfitting. Por esta razón, se desarrollará un nuevo modelo con ajustes en su arquitectura e hiperparámetros para reducir el subajuste y mejorar su rendimiento.
-
----
 
 # Segundo modelo: EfficientNetV2B0
 
@@ -323,10 +309,6 @@ También puede ayudar a reducir el sobreajuste, porque evita que el clasificador
 Dropout apaga aleatoriamente una parte de las neuronas durante el entrenamiento.
 
 Esto obliga al modelo a no depender siempre de las mismas conexiones internas y mejora su capacidad de generalización.
-
-En palabras simples:
-
-> Dropout ayuda a que el modelo no memorice demasiado las imágenes de entrenamiento.
 
 # Callbacks de entrenamiento
 
@@ -382,8 +364,6 @@ history_fine = model_2.fit(
 ```
 
 El `fine-tuning` ayuda a que EfficientNet se adapte mejor al problema específico de emociones de perros.
-
----
 
 # Evaluación final
 
@@ -445,8 +425,6 @@ Matriz de confusión:
  [ 20   9  23  98]]
 ```
 
----
-
 # Interpretación de resultados
 
 Para la evaluación inicial del modelo se utilizaron métricas estándar de clasificación multiclase, debido a que el objetivo del proyecto es clasificar imágenes de perros en cuatro emociones: angry, happy, relaxed y sad. Las métricas seleccionadas fueron accuracy, precision, recall, F1-score y matriz de confusión.
@@ -506,8 +484,6 @@ relaxed → happy
 
 Esto sugiere que algunas expresiones visuales de perros enojados o relajados pueden parecerse a perros felices, especialmente si hay diferencias de iluminación, posición o expresión facial.
 
----
-
 # Comparación con el documento de referencia
 
 El proyecto se apoyó en un documento científico sobre clasificación de emociones de perros mediante CNN.
@@ -531,8 +507,6 @@ Conclusión:
 - El modelo supera ampliamente el azar.
 - Todavía no supera los resultados principales del documento de referencia.
 - Está cerca del rendimiento reportado para VGG16.
-
----
 
 # Conclusión
 
